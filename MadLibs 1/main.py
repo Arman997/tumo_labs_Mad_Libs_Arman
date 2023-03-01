@@ -1,5 +1,7 @@
 import random
 
+s = int(input())
+
 # Stories
 def madlib1():
     Number = input('Input a Number : ')
@@ -85,7 +87,15 @@ def madlib3():
         a pool full of {Noun}. I fall asleep each night on a {Noun2} of {Noun_Plural3} and dream of {Adjective4}
         {Noun_Plural4}. It feels as though I have lived here for {Number} {Measure_of_time}. I hope one day you can
         visit, although the only way to get here now is {Verb_ing}  on a {Adjective5} {Noun5} !!''')
-
-result = random.choice([madlib1, madlib2, madlib3])
-result()
+if s not in [1,2,3]:
+    
+    result = random.choice([madlib1, madlib2, madlib3])
+    result()
+else:
+    if s == 1:
+        madlib1()
+    elif s == 2:
+        madlib2()
+    elif s == 3:
+        madlib3()
 
